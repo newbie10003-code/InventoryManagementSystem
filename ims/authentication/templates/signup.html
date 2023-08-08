@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management <System-Signup></System-Signup></title>
+</head>
+<body>
+    <h1>Signup</h1>
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="Name" id="Name" required>
+        <br>
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email" required>
+        <br>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <br>
+        <label for="password1">Password</label>
+        <input type="password" name="password1" id="password1" required>
+        <br>
+        <label for="password2">Confirm Password</label>
+        <input type="password" name="password2" id="password2" required>
+        <br>
+        <input type="submit" value="Signup">
+    </form>
+    <a href="login.html" style="text-decoration: none;">Login</a>
+</body>
+</html>
